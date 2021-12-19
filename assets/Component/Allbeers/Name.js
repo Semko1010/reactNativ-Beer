@@ -1,14 +1,17 @@
 import React from 'react';
 import { View,Text,Image,StyleSheet,Button } from 'react-native'
+import {Link} from "react-router-native"
 const Test = (props) => {
     return (
     <View style={styles.container}>
         <View style={styles.container1}>
-        <Text>{props.name}</Text>
-        <Text>{props.tagline}</Text>
-        <Text>{props.contributed_by}</Text>
+        <Text style={styles.text1}>{props.name}</Text>
+        <Text style={styles.text2}>{props.tagline}</Text>
+        <Text style={styles.text3}>{props.contributed_by}</Text>
         <View style={styles.Button}>
-        <Button  title="Details"></Button>
+        <Link to={`/details/${props.id}`}>
+            <Text style={styles.text4}>Details</Text>
+        </Link>
         </View>
         </View>
         <Image style={styles.Image} source={{uri:props.image_url}}/>
@@ -21,7 +24,7 @@ export default Test;
 const styles = StyleSheet.create({
    Image:{
     height:150,
-    width:50,
+    width:40,
     
     },
     container:{
@@ -32,18 +35,34 @@ const styles = StyleSheet.create({
         borderBottomWidth:1
     },
     Button:{
-        backgroundColor:"yellow",
+        backgroundColor:"#FFCA41",
         borderRadius:20,
         marginTop:30,
-        width:100,
+        marginBottom:10,
         height:40,
+        paddingLeft:65,
+        paddingTop:7,
+        
     },
     container1:{
         width:"80%",
         paddingLeft:80
-        
-        
-    }
+    },
+    text1:{
+        fontSize:22
+    },
+    text2:{
+       color:"#FFCA41",
+       fontSize:18
+    },
+    text3:{
+       
+    },
+    text4:{
+        color: "white",
+        fontSize:20
+    },
+
     
   });
   

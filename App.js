@@ -3,7 +3,7 @@ import Test2 from './assets/Component/Allbeers/test2'
 import { StyleSheet, Text, View,Image } from 'react-native';
 import Home from './assets/Component/Home/Home'
 import { NativeRouter, Route, Link,Routes} from "react-router-native";
-
+import Id from './assets/Component/Allbeers/Id'
 class App extends Component {
  
 
@@ -18,17 +18,17 @@ class App extends Component {
     return ( 
     
     
-    <NativeRouter>
+     <NativeRouter>
     <View style={styles.container}>
-      <Routes>
-
-        <Route exact path="/" component={Home}/>
-      </Routes>
-
-      
- 
+   
+     <Routes>
+       <Route exact path="/" element={<Home/>}/>
+       <Route path="/allbeers" element={<Test2/>}/>
+       <Route path="/details/:id" element={<Id/>}/>
+     </Routes>
+   
     </View> 
-    </NativeRouter>
+     </NativeRouter>
       
       );
       

@@ -27,13 +27,14 @@ class Test2 extends Component {
         <ScrollView style={styles.container}>
             {this.state.data.map(e =>
                 <Test
+                id={e._id}
+                key={e._id}
                 image_url={e.image_url}
                 name={e.name}
                 tagline={e.tagline}
                 contributed_by={e.contributed_by}
                 
-                
-                />
+/>
                 
                 )}
 
