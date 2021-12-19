@@ -1,6 +1,6 @@
 import React from 'react';
-import { View,Text,Button,Image,StyleSheet } from 'react-native'
-import { NativeRouter, Route, Link } from "react-router-native";
+import { View,Text,Image,StyleSheet } from 'react-native'
+import { Link } from "react-router-native";
 const Home = () => {
     return (
     <View style={styles.container}>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Test from './Name'
-import { View,Text,ScrollView,StyleSheet } from 'react-native'
+import {ScrollView,StyleSheet} from 'react-native'
 class Test2 extends Component {
     constructor(props) {
         super(props);
@@ -24,7 +24,9 @@ class Test2 extends Component {
 
     render() { 
         return ( 
-        <ScrollView style={styles.container}>
+        <ScrollView 
+        style={styles.container}showsVerticalScrollIndicator={false}
+        showsHorizontalScrollIndicator={false}>
             {this.state.data.map(e =>
                 <Test
                 id={e._id}
